@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Simple Guestbook</title>
+
+  <style>
+  body {
+    max-width: 920px;
+    margin: auto;
+  }
+
+  .comment {
+    background-color: #ccc;
+    padding: 8px;
+    margin-top: 16px;
+    border-radius: 4px;
+  }
+
+  input { font-size: 1.2rem; padding: 8px; }
+
+  #formMsg {
+    width: 400px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  #submit {
+    padding: 8px;
+    font-size: 1.4rem;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>Message Board</h1>
+  <div>
+    <% comments.forEach(function(comment) { %>
+    <section class="comment">
+      <div class="name"><%= comment.name %></div>
+      <span class="content"><%= comment.content %></span>
+    </section>
+    <% }); %>
+  </div>
+  <h1>Leave Yours</h1>
+  <form method="POST">
+    Name: <input name="name" autocomplete="off"><br>
+    Message: <input id="formMsg" name="msg" autocomplete="off"><br>
+    <input id="submit" name="submitForm" type="submit" value="Submit!">
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "node-test",
+  "version": "0.0.1",
+  "description": "Node test @ NTUOSC 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.22.0",
+    "ejs": "^2.5.2",
+    "express": "^4.13.4",
+    "html": "0.0.10",
+    "request": "^2.69.0"
+  }
+}
